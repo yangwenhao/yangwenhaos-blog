@@ -1,0 +1,64 @@
+{% load staticfiles %}
+{% load comments %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>杨文浩</title>
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
+<!--[if (lt IE 9)&(!IEMobile)]>
+    <link rel="stylesheet" href="{% static 'blog/css/ie-layout.css' %}">
+<![endif]-->
+{% endblock %}
+</head>
+
+<body>
+<div id="site-wrapper">
+
+<header id="site-header">
+  <h1>杨文浩</h1>
+  <p><img src="/../../static/blog/images/Bogoto.jpg" alt="Bogoto" /></p>
+  <nav id="site-nav">
+    <ul>
+        <li><a href="{% url 'blog:index' %}">首页</a></li>
+        <li><a href="{% url 'blog:archives' %}">文章</a></li>
+	<li><a href="{% url 'blog:contact' %}">联系</a></li>
+        <li><a href="{% url 'blog:about' %}">关于</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="site-main">{% block content %}{% endblock %}</div>
+
+<aside id="site-bar">
+    <ul>
+        <li><h3>最新文章</h3>
+	    <ul>
+            {% for post in recent_posts %}
+                <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+	    {% endfor %}
+	    </ul>
+	</li>
+	<li id="recent-comments"><h3>最新评论</h3>
+	    <ul>
+	    {% for comment in recent_comments %}
+	        <li><a href="{% get_comment_permalink comment %}">{{ comment.user_name }}</a>: <q>{{ comment.comment|truncatechars:30 }}</q></li> 
+	    {% endfor %}
+            </ul>
+	</li>
+    </ul>
+</aside>
+
+<footer id="site-footer">
+{% block footer %}
+    <p id="copyright"><small>Copyright &copy;2013 Yang Wenhao</small></p>
+{% endblock %}
+</footer>
+
+</div>
+</body>
+</html>
+    

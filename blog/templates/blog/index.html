@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/post.css' %}">
+{% endblock %}
+
+{% block content %}
+{% for post in selected_posts %}
+<article>
+    <header>
+        <h3 class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+        <p class="pubdate"><time datetime="{{ post.pub_date|date:"Y-m-d" }}">
+	{{ post.pub_date|date:"Y年n月j日" }}</time></p> 
+    </header>
+
+    <div class="post-text">
+        {{ post.text|truncatechars:200 }}
+        <a class="post-link" href="{{ post.get_absolute_url }}">[阅读全文]</a>
+    </div>
+</article>
+{% endfor %}
+
+<nav id="page-nav">
+    <ul>
+    {% for num in pages_range %}
+        <li> 
+	    {% if page_num != num %}
+	    <a href="{% url 'blog:page' num %}">{{ num }}</a>
+	    {% else %}
+	    <span>{{ num }}</span>
+	    {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+</nav>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}
+

@@ -1,0 +1,29 @@
+#comments, #comment-form {
+    margin-top: .8em;
+}
+
+.comment-title {
+    margin-top: 2em;
+    font-weight: normal;
+}
+
+.comment {
+    margin-top: 1.2em;
+}
+
+.commenter {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    font-size: 1em;
+    width: 40%;
+}
+
+textarea {
+    font-size: 1em;
+    width: 80%;
+    line-height: 1.8em;
+    height: 12em;
+}

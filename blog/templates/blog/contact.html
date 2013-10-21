@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles i18n %}
+
+{% block stylesheet %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'blog:contact' %}" method="post">{% csrf_token %}
+    <fieldset>
+        <legend id="form-title">给杨文浩发邮件</legend>
+        <div class="error">{{ form.sender.errors }}</div>
+        <p><label for="id_sender">您的邮箱<sup class="asterisk">*</sup></label><br>
+        {{ form.sender }}</p>
+
+        <div class="error">{{ form.subject.errors }}</div>
+        <p><label for="id_subject">主题<sup class="asterisk">*</sup></label><br>
+        {{ form.subject }}</p>
+
+        <div class="error">{{ form.message.errors }}</div>
+        <p><label for="id_message">内容<sup class="asterisk">*</sup></label><br>
+        {{ form.message }}</p>
+
+        <div class="error">{{ form.cc_myself.errors }}</div>
+        <p>{{ form.cc_myself }}
+        <label for="id_cc_myself">也发给自己留作备份</label></p>
+
+        <p><input type="submit" value="发送"></p>
+    </fieldset> 
+</form>
+{% endblock %}
+

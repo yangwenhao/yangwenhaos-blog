@@ -1,0 +1,12 @@
+#me {
+}
+
+dt {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0 .4em;
+}
+
+dd {
+    margin-left: 2em;
+}

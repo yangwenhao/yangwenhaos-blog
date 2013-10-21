@@ -1,0 +1,24 @@
+.post-title {
+    margin-top: 1em;
+}
+
+.post-title a {
+    color: #C92227;
+    /*color: #E05600;*/
+}
+
+.post-title a:focus, .post-title a:hover {
+    /*color: #FF4D50;*/
+    /*color: #FF7824;*/
+    border-bottom-color: #C92227;
+}
+
+.post-link {
+    font-style: italic;
+    font-size: .9em;
+    white-space: nowrap;
+}
+
+.post-text {
+    margin-top: .5em;
+}

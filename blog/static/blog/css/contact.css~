@@ -1,0 +1,25 @@
+#form-title {
+    font-size: 1.3em;
+    padding: 1em 0;
+    font-weight: bold;
+}
+
+.asterisk {
+    color: #FA142B;
+}
+
+input[type="text"] {
+    font-size: 1em;
+    width: 45%;
+}
+
+textarea {
+    font-size: 1em;
+    line-height: 1.8em;
+    width: 85%;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}

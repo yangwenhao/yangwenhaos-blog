@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles comments %}
+
+{% block stylesheet %}
+  {{ block.super }} 
+  <link rel="stylesheet" href="{% static 'simple_comment/css/preview.css' %}">
+{% endblock %}
+
+{% block content %}
+  <form action="{% comment_form_target %}" method="post">{% csrf_token %}
+    {% if next %}<div><input type="hidden" name="next" value="{{ next }}" /></div>{% endif %}
+    <h1>请完善您的评论</h1>
+    {% for field in form %}
+      {% if field.name == "url" or field.name == "email" %}
+      {% elif field.is_hidden %}
+        <div>{{ field }}</div>
+      {% else %}
+        {{ field.errors }}
+        <p
+          {% if field.errors %} class="error"{% endif %}
+          {% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>
+          {{ field.label_tag }} <br> {{ field }}
+        </p>
+      {% endif %}
+    {% endfor %}
+    <p class="submit">
+    <input type="submit" name="submit" class="submit-post" value="发表" />
+    </p>
+  </form>
+{% endblock %}

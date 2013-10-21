@@ -1,0 +1,265 @@
+/********* CSS reset ************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*********************** CSS define  **********************/
+
+html {
+    height: 100%;
+}
+
+a {
+    text-decoration: none; 
+    color: #0054B0;
+}
+
+a:focus, a:hover {
+    /*color: #268EFF;*/
+    border-bottom: 1px solid #0054B0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 { font-size: 2em; font-weight: bold; }
+h2 { font-size: 1.3em; font-weight: bold; }
+h3 { font-size: 1.2em; font-weight: bold; }
+
+.long-word {
+    word-wrap: break-word;
+}
+
+.pubdate {
+    font-style: italic;
+    font-size: .9em;
+    color: #919191;
+}
+
+#site-nav {
+    font-size: 1.2em;
+    padding-left: 1.1%;
+    overflow: hidden;
+    width: 100%;
+    /*background: #E0E89B;*/
+    background: #44749D;
+}
+
+#site-nav a {
+    /*color: #474747;*/
+    color: #B7D4ED;
+    display: block;
+    padding: .2em 1.1em;
+    transition-duration: 0.2s;
+
+}
+
+#site-nav a:hover, #site-nav a:focus {
+    color: #FFF;
+    /*background: #8D963E;*/
+    background: #5A9AD1;
+    border: none;
+}
+
+#site-nav li {
+    float: left;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 0;
+    text-align: center;    
+    width: 100%;
+    letter-spacing: 0;
+    line-height: 1em;
+    padding: 1em 0;
+    /*background: #D4CC96;*/
+    background: #B3ADA2;
+    color: #474747;
+}
+
+#page-nav {
+    margin-top: 3em;
+}
+
+#page-nav li {
+    float: left;
+    margin-right: .2em;
+    line-height: 1.5em;
+}
+
+#page-nav a {
+    display: block;
+    padding: 0 .25em;
+    transition-duration: 0.2s;
+}
+
+#page-nav a:hover, #page-nav a:focus {
+    color: #FFF;
+    /*background: #8D963E;*/
+    background: #5A9AD1;
+    border: none;
+}
+
+#page-nav span {
+    display: block;
+    padding: 0 .25em;
+}
+
+/* setup for width < 481px */
+body {
+    font-size: 14px;
+    font-family: "Lucida Grande", Verdana, Arial, "Microsoft YaHei", "微软雅黑", SimSum, 宋体, STXihei, "华文细黑", sans-serif;
+    background: #CCC;
+    color: #474747;
+    height: 100%;
+    letter-spacing: .03em;
+    line-height: 2em;
+}
+
+#site-wrapper {
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #F2F0E1;
+}
+
+#site-bar {
+    clear: both;
+    padding: 1em 3% 6em;
+    margin-top: 2em;
+    background: #DCE6E5;
+    /*background: #C6D4E1;*/
+    color: #474747;
+    /*color: #333333;*/
+}
+
+#site-bar h3 {
+    margin: .5em 0;
+}
+
+#recent-comments li {
+    margin: .5em 0;
+    line-height: 1.8em;
+}
+
+#site-header h1 {
+    margin: .5em 0 .5em 3%;
+}
+
+#site-header img {
+    display: none;
+}
+
+#site-main {
+    margin: 0 3%;
+}
+
+/* setup for width > 481px */
+@media screen and (min-width: 481px) {
+
+body {
+    height: 98%;
+    margin-top: .6em;
+}
+
+#site-wrapper {
+    border-radius: 3em;
+    margin: 0 2% 1em 2%;
+}
+
+#site-header h1 {
+    display: none;
+}
+
+#site-header img {
+    display: inline;
+}
+
+#site-header p {
+    line-height: 0em;
+}
+
+}
+/* setup for width > 780px */
+@media screen and (min-width: 780px) {
+
+#site-wrapper {
+    min-height: 90%;
+    padding-bottom: 6em;
+    max-width: 900px;
+    background-image: url(../images/bg.png);
+    /*background-image: url(../images/bg1.png);*/
+    background-position: 70%;
+    background-repeat: repeat-y;
+}
+
+#site-bar {
+    clear: none;
+    padding: 0;
+    margin: 1.2em 3% 0 73%;
+}
+
+#site-main {
+    float: left;
+    width: 64%;
+}
+
+}
+/* setup for width > 958px, make sure left margin equals right margin */
+@media screen and (min-width: 938px) {
+
+#site-wrapper {
+    margin: 0 auto 1em;
+}
+
+}
+
+

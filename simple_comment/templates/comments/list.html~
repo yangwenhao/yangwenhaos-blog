@@ -1,0 +1,16 @@
+<dl id="comments">
+  {% for comment in comment_list %}
+    <div class="comment"
+    {% if forloop.last %}
+        id="last-comment"
+    {% endif %}
+    >
+    <dt id="c{{ comment.id }}">
+        <span class="commenter">{{ comment.name }}</span> - <span class="pubdate">{{ comment.submit_date|date:"Y-n-j H:i"}}</span>
+    </dt>
+    <dd class="comment-text">
+        <p>{{ comment.comment }}</p>
+    </dd>
+    </div>
+  {% endfor %}
+</dl>

@@ -1,0 +1,215 @@
+/********* CSS reset ************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*********************** CSS define  **********************/
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Lucida Grande", Verdana, Arial, "Microsoft YaHei", "微软雅黑", SimSum, 宋体, STXihei, "华文细黑", sans-serif;
+    background: #CCC;
+    color: #474747;
+    height: 98%;
+    margin-top: .6em;
+    letter-spacing: .03em;
+    line-height: 2em;
+}
+
+a {
+    text-decoration: none; 
+    color: #005EC2;
+}
+
+a:focus {
+    color: #FF4500;
+}
+
+a:hover {
+    color: #FF4500;
+}
+
+img {
+    max-width: 100%;
+}
+
+#site-wrapper {
+    min-height: 90%;
+    padding-bottom: 6em;
+    position: relative;
+    overflow: hidden;
+    background: #F2F0E1;
+}
+
+#site-bar {
+    margin: 0 3%;
+}
+
+#site-bar h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+    font-weight: bold;
+}
+
+#site-header h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#site-header img {
+    display: none;
+}
+
+#site-main {
+    margin: 0 3%;
+    float: left;
+    width: 64%;
+}
+
+@media screen and (min-width: 481px) {
+
+#site-wrapper {
+    border-radius: 3em;
+    margin: 0 auto 1em;
+}
+
+#site-header h1 {
+    display: none;
+}
+
+#site-header img {
+    display: inline;
+}
+
+#site-header p {
+    line-height: 0em;
+}
+
+}
+
+@media screen and (min-width: 780px) {
+
+#site-wrapper {
+    max-width: 900px;
+    background-image: url(../images/bg.png);
+    background-position: 70%;
+    background-repeat: repeat-y;
+}
+
+#site-bar {
+    margin: 1.5em 3% 0 73%;
+}
+
+#site-main {
+    float: left;
+    width: 64%;
+}
+
+}
+
+#site-nav {
+    font-size: 1.2em;
+    padding-left: 1.1%;
+    overflow: hidden;
+    width: 100%;
+    background: #E0E89B;
+}
+
+#site-nav a {
+    display: block;
+    padding: .08em 1em;
+}
+
+#site-nav a:hover, #site-nav a:focus {
+    color: #0069D9;
+    background: #B1EB3C;
+}
+
+#site-nav li {
+    float: left;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 1.5em;
+    text-align: center;    
+    width: 100%;
+    letter-spacing: 0;
+    line-height: 1em;
+}
+
+#page-nav {
+    margin-top: 3em;
+}
+
+#page-nav li {
+    float: left;
+    margin-right: .2em;
+    line-height: 1.5em;
+}
+
+#page-nav a {
+    /*border: solid thin #0069D9;*/
+    display: block;
+    padding: 0 .25em;
+}
+
+#page-nav a:hover, #page-nav a:focus {
+    color: #0069D9;
+    background: #B1EB3C;
+}
+
+#page-nav span {
+    display: block;
+    padding: 0 .25em;
+}

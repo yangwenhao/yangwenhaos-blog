@@ -1,0 +1,10 @@
+<div id="top">
+    <h1>杨文浩的博客</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'blog:index' %}">首页</a></li>
+	    <li><a href="{% url 'blog:archives' %}">文章</a></li>
+            <li><a href="{% url 'blog:about' %}">关于</a></li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,19 @@
+body {
+    font-size: 14px;
+    font-family: "Lucida Grande", Verdana, Arial, "Microsoft YaHei", "微软雅黑", SimSum, 宋体, STXihei, "华文细黑", sans-serif;
+    background: #F2F0E1;
+    color: #474747;
+    letter-spacing: .03em;
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.errorlist {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: red;
+}

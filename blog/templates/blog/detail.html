@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load comments %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/post.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/comment.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<article>
+    <header>
+        <h2 class="post-title">{{ post.title }}</h2>
+	<p class="pubdate"><time datetime="{{ post.pub_date|date:"Y-m-d" }}">
+	{{ post.pub_date|date:"Y年n月j日" }}</time></p>
+    </header>
+    
+    <div class="post-text">{{ post.text }}</div>
+</article>
+
+<h3 class="comment-title">发表评论</h3>
+{% render_comment_form for post %}
+
+{% get_comment_count for post as comment_count %}
+<h3 class="comment-title">共 {{ comment_count }} 条评论</h3>
+{% render_comment_list for post %}
+
+{% endblock %}
+
