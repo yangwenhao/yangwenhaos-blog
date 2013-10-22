@@ -6,7 +6,7 @@ class Post(models.Model):
     text = models.TextField()
     pub_date = models.DateTimeField('date published')
 
-    def __str__(self):
+    def __unicode__(self):
         return self.title
 
     def get_absolute_url(self):
