@@ -1,5 +1,5 @@
-{% load staticfiles %}
-{% load comments %}
+{% load staticfiles comments %}
+
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +20,6 @@
 
 <header id="site-header">
   <h1>杨文浩</h1>
-  <p><img src="/../../static/blog/images/Bogoto.jpg" alt="Bogoto" /></p>
   <nav id="site-nav">
     <ul>
         <li><a href="{% url 'blog:index' %}">首页</a></li>
