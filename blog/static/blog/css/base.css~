@@ -190,13 +190,8 @@ body {
     line-height: 1.8em;
 }
 
-#site-header {
-    background: #44749D;
-}
-
 #site-header h1 {
-    color: #FFF;
-    padding: 1em 0 1em 3%;
+    margin: .5em 0 .5em 3%;
 }
 
 #site-header img {
@@ -221,7 +216,7 @@ body {
 }
 
 #site-header h1 {
-    /*display: none;*/
+    display: none;
 }
 
 #site-header img {
