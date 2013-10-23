@@ -212,7 +212,7 @@ body {
 
 #site-wrapper {
     border-radius: 3em;
-    min-height: 99%;
+    /*min-height: 99%;*/
     margin: 0 2% 1em 2%;
 }
 
