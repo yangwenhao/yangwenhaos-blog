@@ -172,6 +172,7 @@ body {
 }
 
 #site-bar {
+    min-height: 100%;
     clear: both;
     padding: 1em 3% 6em;
     margin-top: 2em;
@@ -212,6 +213,7 @@ body {
 
 #site-wrapper {
     border-radius: 3em;
+    min-height: 99%;
     margin: 0 2% 1em 2%;
 }
 
@@ -232,7 +234,7 @@ body {
 @media screen and (min-width: 780px) {
 
 #site-wrapper {
-    min-height: 90%;
+    min-height: 89%;
     padding-bottom: 6em;
     max-width: 900px;
     background-image: url(../images/bg.png);
