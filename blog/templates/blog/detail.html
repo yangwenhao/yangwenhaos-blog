@@ -17,7 +17,7 @@
 	{{ post.pub_date|date:"Y年n月j日" }}</time></p>
     </header>
     
-    <div class="post-text">{{ post.text }}</div>
+    <div class="post-text full-text">{{ post.text|safe }}</div>
 </article>
 
 <h3 class="comment-title">发表评论</h3>

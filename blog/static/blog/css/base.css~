@@ -69,6 +69,11 @@ img {
     max-width: 100%;
 }
 
+b, strong {
+    font-weight: bold;
+    color: #2B2B2B;
+}
+
 h1 { font-size: 2em; font-weight: bold; }
 h2 { font-size: 1.3em; font-weight: bold; }
 h3 { font-size: 1.2em; font-weight: bold; }
@@ -97,14 +102,13 @@ h3 { font-size: 1.2em; font-weight: bold; }
     color: #B7D4ED;
     display: block;
     padding: .2em 1.1em;
-    transition-duration: 0.2s;
-
+    /*transition-duration: 0.2s;*/
 }
 
 #site-nav a:hover, #site-nav a:focus {
     color: #FFF;
     /*background: #8D963E;*/
-    background: #5A9AD1;
+    /*background: #5A9AD1;*/
     border: none;
 }
 
@@ -172,7 +176,6 @@ body {
 }
 
 #site-bar {
-    min-height: 100%;
     clear: both;
     padding: 1em 3% 6em;
     margin-top: 2em;

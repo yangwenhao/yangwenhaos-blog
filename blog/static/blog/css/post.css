@@ -1,5 +1,5 @@
 .post-title {
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 .post-title a {
@@ -21,4 +21,8 @@
 
 .post-text {
     margin-top: .5em;
+}
+
+.full-text {
+    white-space: pre-wrap;
 }
