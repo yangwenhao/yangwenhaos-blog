@@ -69,7 +69,7 @@ img {
     max-width: 100%;
 }
 
-b, strong {
+b {
     font-weight: bold;
     color: #2B2B2B;
 }

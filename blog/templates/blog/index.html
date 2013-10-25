@@ -9,21 +9,21 @@
 {% block content %}
 
 {% for post in selected_posts %}
-<article>
-    <header>
+<div class="article">
+    <div class="article-header">
         <h3 class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
         <p class="pubdate"><time datetime="{{ post.pub_date|date:"Y-m-d" }}">
 	{{ post.pub_date|date:"Y年n月j日" }}</time></p> 
-    </header>
+    </div>
 
     <div class="post-text">
         {{ post.text|striptags|truncatechars:200 }}
         <a class="post-link" href="{{ post.get_absolute_url }}">[阅读全文]</a>
     </div>
-</article>
+</div>
 {% endfor %}
 
-<nav id="page-nav">
+<div id="page-nav">
     <ul>
     {% for num in pages_range %}
         <li> 
@@ -35,7 +35,7 @@
         </li>
     {% endfor %}
     </ul>
-</nav>
+</div>
 
 {% endblock %}
 

@@ -142,7 +142,7 @@ h3 { font-size: 1.2em; font-weight: bold; }
 #page-nav a {
     display: block;
     padding: 0 .25em;
-    transition-duration: 0.2s;
+    /*transition-duration: 0.2s;*/
 }
 
 #page-nav a:hover, #page-nav a:focus {

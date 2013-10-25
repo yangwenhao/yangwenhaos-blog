@@ -17,7 +17,7 @@
     </header>
 
     <div class="post-text">
-        {{ post.text|truncatechars:200|striptags }}
+        {{ post.text|striptags|truncatechars:200 }}
         <a class="post-link" href="{{ post.get_absolute_url }}">[阅读全文]</a>
     </div>
 </article>
