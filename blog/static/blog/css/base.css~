@@ -186,7 +186,7 @@ body {
 }
 
 #site-bar h3 {
-    margin: .5em 0;
+    margin-top: 1.2em;
 }
 
 #recent-comments li {
@@ -196,7 +196,7 @@ body {
 
 #recent-posts li {
     line-height: 1.5em;
-    margin: .5em 0;
+    margin: .7em 0;
 }
 
 #site-header h1 {
