@@ -35,7 +35,7 @@
 
 <div id="site-bar">
     <ul>
-        <li><h3>最新文章</h3>
+        <li id="recent-posts"><h3>最新文章</h3>
 	    <ul>
             {% for post in recent_posts %}
                 <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>

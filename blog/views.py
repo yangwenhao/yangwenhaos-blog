@@ -31,7 +31,7 @@ def page(request, page_num):
                posts_per_page * page_num
     context = basic_context()
     ordered_posts = context['ordered_posts']
-    pages_count = int(math.ceil(ordered_posts.count() / posts_per_page))
+    pages_count = int(math.ceil(ordered_posts.count()*1.0/posts_per_page))
     context.update(selected_posts=ordered_posts[beg:end],
                    pages_range=range(1, pages_count+1),
                    page_num=page_num)

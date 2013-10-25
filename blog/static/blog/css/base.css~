@@ -142,13 +142,13 @@ h3 { font-size: 1.2em; font-weight: bold; }
 #page-nav a {
     display: block;
     padding: 0 .25em;
-    transition-duration: 0.2s;
+    /*transition-duration: 0.2s;*/
 }
 
 #page-nav a:hover, #page-nav a:focus {
-    color: #FFF;
+    /*color: #FFF;*/
     /*background: #8D963E;*/
-    background: #5A9AD1;
+    /*background: #5A9AD1;*/
     border: none;
 }
 
@@ -192,6 +192,11 @@ body {
 #recent-comments li {
     margin: .5em 0;
     line-height: 1.8em;
+}
+
+#recent-posts li {
+    line-height: 1.5em;
+    margin: .5em 0;
 }
 
 #site-header h1 {
