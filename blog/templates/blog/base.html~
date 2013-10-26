@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="{% static 'blog/css/ie-layout.css' %}">
 <![endif]-->
 {% endblock %}
+{% include 'google_analytics.html' %}
 </head>
 
 <body>
 <div id="site-wrapper">
-
 <div id="site-header">
   <h1>杨文浩</h1>
   <p><img src="{% static 'blog/images/Bogoto.jpg' %}" alt="Bogoto" /></p>
@@ -57,9 +57,8 @@
     <p id="copyright"><small>Copyright &copy;2013 Yang Wenhao</small></p>
 {% endblock %}
 </div>
-
-{% include 'google_analytics.html' %}
 </div>
+
 </body>
 </html>
     
