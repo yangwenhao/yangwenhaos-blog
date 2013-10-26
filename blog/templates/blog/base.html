@@ -20,7 +20,7 @@
 
 <div id="site-header">
   <h1>杨文浩</h1>
-  <p><img src="/../../static/blog/images/Bogoto.jpg" alt="Bogoto" /></p>
+  <p><img src="{% static 'blog/images/Bogoto.jpg' %}" alt="Bogoto" /></p>
   <div id="site-nav">
     <ul>
         <li><a href="{% url 'blog:index' %}">首页</a></li>
@@ -58,6 +58,7 @@
 {% endblock %}
 </div>
 
+{% include 'google_analytics.html' %}
 </div>
 </body>
 </html>
