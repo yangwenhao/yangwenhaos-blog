@@ -75,7 +75,7 @@ b {
 }
 
 h1 { font-size: 2em; font-weight: bold; }
-h2 { font-size: 1.3em; font-weight: bold; }
+h2 { font-size: 1.3em; font-weight: bold; margin: 1em 0; }
 h3 { font-size: 1.2em; font-weight: bold; }
 
 .long-word {
@@ -263,7 +263,7 @@ body {
 }
 
 }
-/* setup for width > 958px, make sure left margin equals right margin */
+/* setup for width > 938px, make sure left margin equals right margin */
 @media screen and (min-width: 938px) {
 
 #site-wrapper {

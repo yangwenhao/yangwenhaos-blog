@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<h2 id="archives-title">全部文章</h2>
+<h2>全部文章</h2>
 <ul>
 {% for post in ordered_posts %}
 {% with date=post.pub_date title=post.title %}
